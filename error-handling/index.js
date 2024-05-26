@@ -13,6 +13,7 @@ module.exports = (app) => {
     if (!res.headersSent) {
       res.status(500).json({
         message: "Internal server error. Check the server console",
+        success: false,
       });
     }
   });
