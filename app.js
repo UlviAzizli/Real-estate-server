@@ -17,9 +17,11 @@ require("./config")(app);
 // 👇 Start handling routes here
 const userRouter = require("./routes/user.route.js");
 const authRouter = require("./routes/auth.route.js");
+const listingRouter = require("./routes/listing.route.js");
 
 app.use("/api/user", userRouter);
 app.use("/api/auth", authRouter);
+app.use("/api/listing", listingRouter);
 
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);
