@@ -14,6 +14,7 @@ const getUserListings = async (req, res, next) => {
       next(error);
     }
   } else {
+    3;
     return next(errorHandler(401, "You can only view your own listings!"));
   }
 };
